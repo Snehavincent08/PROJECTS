@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="ordering.css" rel="stylesheet"/>
+</head>
+<body>
+    <main>
+    <nav style="grid-area:nav;">
+        <a href="Home.html">HOME</a>
+        <a href="Menu.html">MENU</a>
+        <a href="Contacts.html">RESERVATION</a>
+        <a href="sv-ordering.html">ORDER NOW</a>
+
+    </nav>
+    <div class="menu-item" style="grid-area:main;" >
+        <div class="section1" style="grid-area:section1">
+
+            <div  class="item" style="grid-area: item1;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-1" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Seafood-Pasta</p></div>
+                </div>
+                <div class="price" style="grid-area:price" value="19.99">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$19.99</p>
+                </div>
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity1" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity1" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity1').value++, addTotal(19.99,document.getElementById('quantity1').value, document.getElementById('output1'))" style="grid-area: add; " class="add">+</button>
+
+                    <button onclick=" document.getElementById('quantity1').value > 0? [document.getElementById('quantity1').value--]:[document.getElementById('quantity1').value], subTotal(19.99,document.getElementById('quantity1').value,  document.getElementById('output1'))" style="grid-area: sub;" class="sub">-</button>
+
+                    <button onclick="document.getElementById('quantity1').value=0, clearTotal(19.99,document.getElementById('quantity1').value, document.getElementById('output1'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>
+                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output1" style="grid-area:output;">0.00</p>
+                </div>
+
+            </div>
+
+            <div  class="item" style="grid-area: item2;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-2" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Fish and Chips</p></div>
+                </div>
+
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$15.99</p>
+                </div>                
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity2" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity2" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity2').value++, addTotal(15.99,document.getElementById('quantity2').value, document.getElementById('output2'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity2').value > 0? [document.getElementById('quantity2').value--]:[document.getElementById('quantity2').value], subTotal(15.99,document.getElementById('quantity2').value, document.getElementById('output2'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity2').value=0, clearTotal(15.99,document.getElementById('quantity2').value, document.getElementById('output2'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output2" style="grid-area:output;" >0.00</p>
+                </div>
+            </div>
+            
+            <div  class="item" style="grid-area: item3;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-3" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Coconut Sorbet</p></div>
+                </div>
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$5.99</p>
+                </div>                     
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity3" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity3" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity3').value++, addTotal(5.99,document.getElementById('quantity3').value, document.getElementById('output3'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity3').value > 0? [document.getElementById('quantity3').value--]:[document.getElementById('quantity3').value], subTotal(5.99,document.getElementById('quantity3').value, document.getElementById('output3'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity3').value=0, clearTotal(5.99,document.getElementById('quantity3').value, document.getElementById('output3'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output3" style="grid-area:output;" >0.00</p>
+                </div>
+            </div>
+
+            <div  class="item" style="grid-area: item4;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-4" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Lime Pie</p></div>
+                </div>
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$6.99</p>
+                </div>                     
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity4" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity4" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity4').value++, addTotal(6.99,document.getElementById('quantity4').value, document.getElementById('output4'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity4').value > 0? [document.getElementById('quantity4').value--]:[document.getElementById('quantity4').value], subTotal(6.99,document.getElementById('quantity4').value, document.getElementById('output4'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity4').value=0, clearTotal(6.99,document.getElementById('quantity4').value, document.getElementById('output4'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output4" style="grid-area:output;" >0.00</p>
+                </div>
+            </div>
+
+            <div  class="item" style="grid-area: item5;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-5" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Lemonade</p></div>
+                </div>
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$3.50</p>
+                </div>                     
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity5" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity5" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity5').value++, addTotal(3.50,document.getElementById('quantity5').value, document.getElementById('output5'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity5').value > 0? [document.getElementById('quantity5').value--]:[document.getElementById('quantity5').value], subTotal(3.50,document.getElementById('quantity5').value, document.getElementById('output5'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity5').value=0, clearTotal(3.50,document.getElementById('quantity5').value, document.getElementById('output5'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output5" style="grid-area:output;" >0.00</p>
+                </div>
+            </div>
+
+            <div  class="item" style="grid-area: item6;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-6" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Berry Smoothie</p></div>
+                </div>
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$4.57</p>
+                </div>     
+                    <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity6" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity6" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity6').value++, addTotal(4.75,document.getElementById('quantity6').value, document.getElementById('output6'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity6').value > 0? [document.getElementById('quantity6').value--]:[document.getElementById('quantity6').value], subTotal(4.75,document.getElementById('quantity6').value, document.getElementById('output6'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity6').value=0, clearTotal(4.75,document.getElementById('quantity6').value, document.getElementById('output6'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output6" style="grid-area:output;" value="10">0.00</p>
+                </div>
+            </div>
+
+            <div  class="item" style="grid-area: item7;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-7" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Stuffed Clams</p></div>
+                </div>
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$8.99</p>
+                </div>                     
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity7" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity7" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity7').value++, addTotal(8.99,document.getElementById('quantity7').value, document.getElementById('output7'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity7').value > 0? [document.getElementById('quantity7').value--]:[document.getElementById('quantity7').value], subTotal(8.99,document.getElementById('quantity7').value, document.getElementById('output7'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity7').value=0, clearTotal(8.99,document.getElementById('quantity7').value, document.getElementById('output7'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output7" style="grid-area:output;" >0.00</p>
+                </div>
+            </div>
+
+            <div  class="item" style="grid-area: item8;">
+                <div class="container1" style="grid-area:group">
+                    <div id="menu-item-8" style="grid-area:img"></div>
+                    <div class="paragraph" style="grid-area:text"><p style="grid-area:item-name">Crispy Calamari</p></div>
+                </div>
+                <div class="price" style="grid-area:price">
+                    <p class="price-name">Price:</p>
+                    <p class="price-tag">$9.99</p>
+                </div>                     
+                <div class="quantity" style="grid-area:quantity">
+                    <label for="quantity1" style="grid-area: qty;">Quantity</label>
+                    <input type="text" value="0" id="quantity8" style="grid-area: input;" >
+                    <button onclick="document.getElementById('quantity8').value++, addTotal(9.99,document.getElementById('quantity8').value, document.getElementById('output8'))" style="grid-area: add;" class="add">+</button>
+                    <button onclick=" document.getElementById('quantity8').value > 0? [document.getElementById('quantity8').value--]:[document.getElementById('quantity8').value], subTotal(9.99,document.getElementById('quantity8').value, document.getElementById('output8'))" style="grid-area: sub;" class="sub">-</button>
+                    <button onclick="document.getElementById('quantity8').value=0, clearTotal(9.99,document.getElementById('quantity8').value, document.getElementById('output8'))" style="grid-area: clear;" class="clear">Clear</button>
+                </div>                
+                <div class="group-total" style="grid-area:gp;">
+                    <p style="grid-area:total;" class="total">Total:</p>
+                    <p id="output8" style="grid-area:output;" >0.00</p>
+                </div>
+            </div>
+        </div>
+        <div style="grid-area:section2" class="section2">
+            <div class="s2-group">
+                    <p style="grid-area:st;" class="s2-head">Subtotal:</p>
+                    <p style="grid-area:st-input;" class="s2-input" id="sbt"></p>
+                    <p style="grid-area:stax;" class="s2-head">Sales Tax:</p>
+                    <p style="grid-area:stax-input;" class="s2-input"id="stax"></p>
+                    <p style="grid-area:ft; " class="s2-head">Total:</p>
+                    <p style="grid-area:ft-input;" class="s2-input" id="tt"></p>
+                    <button style="grid-area:co;" onclick="checkOut(document.getElementById('sbt'),document.getElementById('stax'),document.getElementById('tt'))">Check Out</button>
+            </div>
+        </div>
+
+
+        <!-- <div id="menu-item-2"class="items">
+        <img src="menu-item/2.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Fish and Chips</p>
+        </div>
+        <div id="menu-item-3"class="items">
+        <img src="menu-item/3.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Coconut Sorbet</p>
+        </div>
+        <div id="menu-item-4"class="items">
+        <img src="menu-item/4.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Lime Pie</p>
+        </div>
+        
+        <div id="menu-item-5"class="items">
+        <img src="menu-item/5.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Lemonade</p>
+        </div>
+        <div id="menu-item-6"class="items">
+        <img src="menu-item/6.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Berry Smoothie</p>
+        </div>
+        <div id="menu-item-7"class="items">
+        <img src="menu-item/7.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Crispy Calamari</p>
+        </div>
+        <div id="menu-item-8"class="items">
+        <img src="menu-item/8.png" alt="seafood-pasta"  style="grid-area:image"/>
+        <p style="grid-area:item-name">Stuffed Clams</p>
+        </div> -->
+
+    </div>
+
+            <script src="ordering.js"></script>
+
+    </main>
+</body>
+</html>
