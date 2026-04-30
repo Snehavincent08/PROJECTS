@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+</head>
+<body>
+    <link rel ="stylesheet" href="styles.css"/>
+    <h1>Contact List</h1>
+    <div id="main-container">
+
+        <div id="box-container" style="grid-area:bc">
+            <div id="box1">
+                <p>Name</p>
+            </div>
+            <div id="box2">
+                <p>Email</p>
+            </div>
+            <div id="box3">
+                <p>Phone Number</p>
+            </div>
+            <div id="box4">
+                <p>Birthday</p>
+            </div>
+        </div>
+      
+        <div id="body-container" style="grid-area:bdc">
+           
+        </div>
+
+    <button id="contact-btn" onclick="contentBtn()">Add Contact</button>
+    <form id="form" style="display:none;">    
+
+        <div id="form-content">
+            <label for="name" >Name</label>
+            <input type="text" id="name" name="name"/>
+            
+            <label for="mail">Email</label>
+            <input type="email" id="mail" name="mail"/>
+            
+            <label for="pn">Phone Number</label>
+            <input type="tel" id="pn" name="pn"/>
+            
+            <label for="bd">Birthday</label>
+            <input type="date" id="bd" name="bd"/>
+
+            <button id="save-btn" onclick="saveBtn()">Save</button>
+
+            <button id="cancel-btn" onclick="cancelBtn()">Cancel</button>
+        </div>    
+    </form>
+    </div>
+    <script src="Script.js"></script>
+    <footer>
+        <p> Sneha Vincent | Project Started: 4/22/26 </p>
+    </footer>
+    
+</body>
+</html>
